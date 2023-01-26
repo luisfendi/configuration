@@ -1,10 +1,21 @@
 import Head from 'next/head';
-import Image from 'next/image';
 import { Inter } from '@next/font/google';
+import Image from 'next/image';
+import styled from 'styled-components';
 import styles from '@/styles/Home.module.css';
+import { Button, FormControl } from '@mui/material';
 
+const StyledButton = styled(Button)`
+  background-color: darkorange;
+  font-weight: bold;
+`;
+const StyledForm = styled(FormControl)`
+  background-color: darkorange;
+  font-weight: bold;
+`;
+//note: trying to do
+//todo:
 const inter = Inter({ subsets: ['latin'] });
-
 export default function Home() {
   return (
     <>
@@ -18,9 +29,14 @@ export default function Home() {
           name='viewport'
           content='width=device-width, initial-scale=1'
         />
-        <link rel='icon' href='/favicon.ico' />
+        <link
+          rel='icon'
+          href='/favicon.ico'
+        />
       </Head>
       <main className={styles.main}>
+        <StyledButton>styled</StyledButton>
+        <StyledForm>styled</StyledForm>
         <div className={styles.description}>
           <p>
             Get started by editing&nbsp;
