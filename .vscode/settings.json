@@ -1,0 +1,4 @@
+{
+  "stylelint.autoFixOnSave": true,
+  "stylelint.useLocal": true
+}

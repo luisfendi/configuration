@@ -1,3 +1,33 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": ["next/core-web-vitals", "prettier"],
+  "plugins": ["prettier"],
+  "settings": {
+    "import/resolver": {
+      "typescript": {}
+    }
+  },
+  "rules": {
+    // "prettier/prettier": 2,
+    "no-var": "error",
+    "array-bracket-newline": "error",
+    "import/order": [
+      0,
+      {
+        "groups": [
+          "external",
+          "builtin",
+          "index",
+          "sibling",
+          "parent",
+          "internal",
+          "type"
+        ],
+        "alphabetize": {
+          "order": "asc",
+          "caseInsensitive": true
+        },
+        "newlines-between": "always-and-inside-groups"
+      }
+    ]
+  }
 }
